@@ -95,9 +95,9 @@ If you also have `Make` and `Docker-compose` installed, you can run a simple loc
      cd $GOPATH/src/github.com/IzakMarais/reporter
      make compose-up
 
-Then open a browser to `http://localhost:3000` and create a new test dashboard. Add the example graph and save the dashboard.
-Observe the new URL and find the dashboard UID, e.g. `qaJCuCezz` from  `http://localhost:3000/d/qaJCuCezz/new-dashboard-copy`
-Next, go to: `http://localhost:8080/api/v5/report/qaJCuCezz`, which will output the grafana-reporter PDF.
+Then open a browser to `http://grafana:3000` and create a new test dashboard. Add the example graph and save the dashboard.
+Observe the new URL and find the dashboard UID, e.g. `qaJCuCezz` from  `http://grafana:3000/d/qaJCuCezz/new-dashboard-copy`
+Next, go to: `http://grafana:8080/api/v5/report/qaJCuCezz`, which will output the grafana-reporter PDF.
 
 ## Development
 
@@ -113,5 +113,5 @@ or, the [GoConvey](http://goconvey.co/) webGUI:
 
 ### Release
 
-A new release requires changes to the git tag, `cmd/grafana-reporter/version.go` and `Makefile: docker-build` job. 
+A new release requires changes to the git tag, `cmd/grafana-reporter/version.go` and `Makefile: docker-build` job.
 Build the Docker image and push to Dockerhub.
